@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1428px;
+            height: 754px;
+            position: absolute;
+            top: 229px;
+            left: 355px;
+            z-index: 1;
+        }
+        .auto-style2 {
+            width: 342px;
+            height: 1148px;
+            position: absolute;
+            top: 223px;
+            left: 10px;
+            z-index: 1;
+        }
+        .auto-style3 {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .auto-style4 {
+            position: absolute;
+            top: 63px;
+            left: 704px;
+            z-index: 1;
+            width: 731px;
+            height: 154px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="auto-style1">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="auto-style2">
+            <asp:Menu ID="Menu1" runat="server" BackColor="#006666" ForeColor="White" Height="1121px" RenderingMode="Table" Width="244px" CssClass="auto-style3">
+                <DynamicHoverStyle BackColor="Black" ForeColor="White" Font-Bold="True" Font-Names="Arial" Font-Size="Medium" />
+                <DynamicMenuItemStyle BackColor="#006666" />
+                <Items>
+                    <asp:MenuItem Text="DashBord" Value="DashBord" ImageUrl="~/Adminimg/Laptop Metrics.png"></asp:MenuItem>
+                    <asp:MenuItem Text="Add" Value="Add" ImageUrl="~/Adminimg/Add Folder.png" NavigateUrl="~/AddProduct.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Graph" Value="Graph" ImageUrl="~/Adminimg/Increase.png" NavigateUrl="~/graphaspx.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Customer's" Value="Customer's" ImageUrl="~/Adminimg/Add User Male.png" NavigateUrl="~/CustomerDetails.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Catgory" Value="Catgory" NavigateUrl="~/Catgory.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Product" Value="Product">
+                        <asp:MenuItem Text="Cloth" Value="Watch" NavigateUrl="~/Product1.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Watch" Value="New Item" NavigateUrl="~/product2.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Shoes" Value="Shoes" NavigateUrl="~/Product3.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Order Details" Value="Order Details" ImageUrl="~/Adminimg/Order Completed.png" NavigateUrl="~/OrderDetails.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Order Addess" Value="Order Addess" ImageUrl="~/Adminimg/Order Completed.png" NavigateUrl="~/OderAddress.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="LogOut" Value="LogOut" ImageUrl="~/image/logo/Move Up.png" NavigateUrl="~/AdminLogin.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="White" ForeColor="Black" />
+            </asp:Menu>
+        </div>
+        <asp:Image ID="Image1" runat="server" Height="199px" ImageUrl="~/image/download.jpeg" Width="314px" />
+        <asp:Label ID="Label1" runat="server" CssClass="auto-style4" Font-Size="65px" Text="Admin DashBord"></asp:Label>
+    </form>
+</body>
+</html>
